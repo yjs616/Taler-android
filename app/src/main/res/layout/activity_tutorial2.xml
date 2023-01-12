@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tutorial2_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Tutorial2Activity">
+
+
+    <Button
+        android:id="@+id/tutorial2_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:backgroundTint="#FF7A00"
+        android:minWidth="0dp"
+        android:text="다음"
+        android:textSize="16dp"></Button>
+
+    <FrameLayout
+        android:id="@+id/tutorial2_character"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+
+        <ImageView
+            android:id="@+id/tutorial2_charater_b"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="110dp"
+            android:src="@drawable/tutorial_character_b">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/tutorial2_charater_m"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:src="@drawable/tutorial_character_m">
+        </ImageView>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_fragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tutorial2_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:background="@drawable/tutorial_txt_bg"
+            android:gravity="center_vertical"
+            android:lineSpacingMultiplier="1.5"
+            android:padding="16dp"
+            android:text="너는 어떤 사람이구나!\n너의 모습을 커스텀해줘."
+            android:textColor="@color/black"
+            android:textSize="16dp"></TextView>
+
+    </FrameLayout>
+
+
+</LinearLayout>
