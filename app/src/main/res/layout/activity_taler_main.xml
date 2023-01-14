@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TalerMain"
+    android:orientation="vertical">
+
+    <!--무지개 물고기-->
+    <Button
+        android:id="@+id/top_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="38dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginEnd="102dp"
+        android:padding="10dp"
+        android:text="'무지개 물고기'"
+        android:textSize="20dp"
+        android:backgroundTint="@color/orange">
+    </Button>
+
+    <FrameLayout
+        android:id="@+id/main_character"
+        android:layout_width="0dp"
+        android:layout_height="256dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_button"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/tutorial1_charater_b"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="110dp"
+            android:src="@drawable/tutorial_character_b">
+        </ImageView>
+        <ImageView
+            android:id="@+id/tutorial1_charater_m"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+           android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:src="@drawable/tutorial_character_m">
+        </ImageView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_character"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp">
+    </FrameLayout>
+
+    <!--padding 부분 수정-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemTextAppearanceActive="@style/NavigationViewOwnStyle"
+        app:itemTextAppearanceInactive="@style/NavigationViewOwnStyle"
+        app:menu="@menu/main_bottom_nav"
+        android:paddingBottom="20dp">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

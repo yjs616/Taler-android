@@ -1,5 +1,6 @@
 package com.example.taler
 
+import android.content.Intent
 import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -76,12 +77,14 @@ class Tutorial2Activity : AppCompatActivity() , TextToSpeech.OnInitListener {
             tts!!.speak(text, TextToSpeech.QUEUE_FLUSH,null,"")
         }
 
-        //"다음" 버튼 누르면 tutorialTxt 프래그먼트
+        //"다음" 버튼 누르면 tutorialTxt 프래그먼트 -> 더 내용 추가 될 경우
         viewBinding.tutorial2NextBtn.setOnClickListener {
-            supportFragmentManager
+            /*supportFragmentManager
                 .beginTransaction()
                 .replace(viewBinding.frameFragment2.id, tutorialTxt2())
-                .commitNowAllowingStateLoss()
+                .commitNowAllowingStateLoss()*/
+            val intent = Intent(this, TalerMain::class.java)
+            startActivity(intent)
         }
 
 

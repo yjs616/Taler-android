@@ -21,7 +21,7 @@ class Tutorial1Activity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     //tts
     private lateinit var tts: TextToSpeech
-    private lateinit var voice:Voice
+    private lateinit var voice:Voice         //추후에..
 
     //soundPool
     private lateinit var mSoundPool: SoundPool
@@ -39,14 +39,12 @@ class Tutorial1Activity : AppCompatActivity(), TextToSpeech.OnInitListener {
         //tts
         tts= TextToSpeech(this,this)
 
-
         setSound()
 
         //mediaPlayer
         mp=MediaPlayer.create(this,R.raw.bgm)
         mp.setVolume(0.5f,0.5f)
         mp.start()
-
 
     }
 
@@ -171,7 +169,6 @@ class Tutorial1Activity : AppCompatActivity(), TextToSpeech.OnInitListener {
             duration = 1000
             rotationYBy(360f)
         }.start()*/
-
 
     }
 
