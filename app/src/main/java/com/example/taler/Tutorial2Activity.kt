@@ -83,7 +83,7 @@ class Tutorial2Activity : AppCompatActivity() , TextToSpeech.OnInitListener {
                 .beginTransaction()
                 .replace(viewBinding.frameFragment2.id, tutorialTxt2())
                 .commitNowAllowingStateLoss()*/
-            val intent = Intent(this, TalerMain::class.java)
+            val intent = Intent(this, CharacterCustomActivity::class.java)
             startActivity(intent)
         }
 

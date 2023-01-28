@@ -9,4 +9,19 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="orange">#FF7A00</color>
+
+    <color name="RandomColor1">#FF6263</color>
+    <color name="RandomColor2">#23C4ED</color>
+    <color name="RandomColor3">#38CC77</color>
+    <color name="RandomColor4">#D9D55B</color>
+    <color name="RandomColor5">#318BD1</color>
+    <color name="RandomColor6">#D345D0</color>
+
+    <!-- Here you can add color of your choice  -->
+    <color name="positiveButtonTextColor">@color/colorAccent</color>
+    <color name="negativeButtonTextColor">@color/colorAccent</color>
+    <color name="bottomSheetDividerColor">#F5F5F5</color>
+
+    <color name="orange_light">#FFBA85</color>
+    <color name="gray">#BDBDBD</color>
 </resources>

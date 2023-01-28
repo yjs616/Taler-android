@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LookRoundActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/txt_taler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TALER"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="16dp">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F8F8F8"
+            android:background="@drawable/shape_round_8dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="로그아웃"
+            android:textColor="#FF0000"
+            android:textSize="16dp">
+        </Button>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/text_chucheon_friend"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:text="추천인 친구"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#FF7A00"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="101dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/text_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:text="즐겨찾기"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#FF7A00"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="268dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/text_chucheonbook"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:text="추천 동화책 방"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#FF7A00"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="435dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <FrameLayout
+        android:id="@+id/framelayout_chucheon_friend"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="#FFF8F8F8">
+
+
+        <ImageButton
+            android:id="@+id/imgbtn1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_circle"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="16dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_circle"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="96dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_circle"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="176dp"/>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="307dp">
+
+
+        <ImageView
+            android:id="@+id/imgView3"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:background="#FFF8F8F8"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn4"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_round_square"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="16dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn5"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_round_square"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="96dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn6"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_round_square"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="176dp"/>
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout_chucheon_book"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="474dp"
+        android:background="#FFF8F8F8">
+
+        <ImageButton
+            android:id="@+id/imgbtn7"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_circle"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="16dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn8"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_circle"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="96dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbtn9"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/shape_interface_circle"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="176dp"/>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
