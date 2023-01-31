@@ -9,4 +9,33 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="orange">#FF7A00</color>
+
+    <color name="MainColor">#FF7A00</color>
+
+    <color name="RandomColor1">#FF6263</color>
+    <color name="RandomColor2">#23C4ED</color>
+    <color name="RandomColor3">#38CC77</color>
+    <color name="RandomColor4">#D9D55B</color>
+    <color name="RandomColor5">#318BD1</color>
+    <color name="RandomColor6">#D345D0</color>
+
+    <color name="hairColor_1">#FD0303</color>
+    <color name="hairColor_2">#FFEB3B</color>
+    <color name="hairColor_3">#4CAF50</color>
+    <color name="hairColor_4">#03A9F4</color>
+    <color name="hairColor_5">#3F51B5</color>
+    <color name="hairColor_6">#673AB7</color>
+    <color name="hairColor_7">#FD03DC</color>
+    <color name="hairColor_8">#FF6263</color>
+    <color name="hairColor_9">#23C4ED</color>
+    <color name="hairColor_10">#38CC77</color>
+
+    <!-- Here you can add color of your choice  -->
+    <color name="positiveButtonTextColor">@color/colorAccent</color>
+    <color name="negativeButtonTextColor">@color/colorAccent</color>
+    <color name="bottomSheetDividerColor">#F5F5F5</color>
+
+    <color name="orange_light">#FFBA85</color>
+    <color name="gray">#BDBDBD</color>
+    <color name="light_gray">#F8F8F8</color>
 </resources>

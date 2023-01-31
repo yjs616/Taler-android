@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CharacterCustomActivity">
+
+    <ImageView
+        android:id="@+id/hairIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_hair_1" />
+
+    <ImageView
+        android:id="@+id/shoesIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_shoes_1" />
+
+    <ImageView
+        android:id="@+id/faceIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_face_1" />
+
+    <ImageView
+        android:id="@+id/pantsIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_pants_1" />
+
+    <ImageView
+        android:id="@+id/clothesIv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_clothes_1" />
+
+
+    <SeekBar
+        android:id="@+id/costumeSb"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:max="10"
+        android:min="1"
+        android:progressDrawable="@drawable/shape_custom_seekbar"
+        android:rotation="270"
+        android:splitTrack="false"
+        android:thumb="@drawable/shape_custom_seekbar_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.604" />
+
+    <RadioGroup
+        android:id="@+id/costumeRg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.741">
+
+        <RadioButton
+            android:id="@+id/hairBtn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_custom_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="머리"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="462dp" />
+
+        <RadioButton
+            android:id="@+id/clothesBtn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_custom_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="상의"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="505dp" />
+
+        <RadioButton
+            android:id="@+id/pantsBtn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_custom_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="하의"
+            tools:layout_editor_absoluteX="124dp"
+            tools:layout_editor_absoluteY="570dp" />
+
+        <RadioButton
+            android:id="@+id/shoesBtn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_custom_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="신발"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="645dp" />
+
+        <RadioButton
+            android:id="@+id/faceBtn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_custom_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="얼굴"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="550dp" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/costumeRg"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/genderRg"
+        app:layout_constraintTop_toBottomOf="@+id/clothesIv"
+        app:layout_constraintVertical_bias="0.505">
+
+        <RadioButton
+            android:id="@+id/manBtn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_custom_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="남자"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="230dp" />
+
+        <RadioButton
+            android:id="@+id/womanBtn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_custom_radio_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="여자" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/shape_round_8dp_orange"
+        android:textColor="@color/white"
+        android:text="다음"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/costumeTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="277dp"
+        android:layout_marginTop="200dp"
+        android:text="스타일"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/costumeSb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <TextView
+        android:id="@+id/nicknameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="108dp"
+        android:text="닉네임"
+        android:textColor="@color/orange"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.018"
+        app:layout_constraintStart_toEndOf="@+id/clothesIv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

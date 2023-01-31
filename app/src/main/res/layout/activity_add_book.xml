@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBookActivity">
+
+    <TextView
+        android:id="@+id/text_taler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TALER"
+        android:textSize="48dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_book_register"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="32dp"
+        android:text="동화책 등록"
+        android:background="@drawable/shape_round_14dp"
+        android:elevation="3dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_taler"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="69dp">
+    </Button>
+
+    <!--노래-->
+
+    <!--배경색-->
+
+    <!--padding 부분 수정-->
+    <Button
+        android:id="@+id/btn_music"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="#D9D9D9"
+        android:elevation="3dp"
+        android:text="노래"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_book_register"></Button>
+
+    <Button
+        android:id="@+id/btn_backgroundColor"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="92dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="#D9D9D9"
+        android:elevation="3dp"
+        android:text="배경색"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_book_register"></Button>
+
+    <ImageView
+        android:id="@+id/img_character"
+        android:layout_width="187dp"
+        android:layout_height="195dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="#D9D9D9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_music"></ImageView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#C5DBA9"
+        android:paddingBottom="20dp"
+        app:itemTextAppearanceActive="@style/NavigationViewOwnStyle"
+        app:itemTextAppearanceInactive="@style/NavigationViewOwnStyle"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main_bottom_nav"></com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <FrameLayout
+        android:id="@+id/frame_fragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_character">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

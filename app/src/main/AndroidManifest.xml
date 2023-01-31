@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.taler">
+    <!-- permission -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <queries>
         <intent>
@@ -18,9 +26,58 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Taler"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".TalerMain"
+            android:name=".MainMindCircleFragment"
+            android:exported="false" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Tutorial1Activity"
+            android:exported="false"
+            android:label="직접 입력하세요!" />
+        <activity
+            android:name=".SelectTextRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EnrollBookActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".CharActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BackgroundColorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MusicActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FriendTalerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LookRoundActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CharacterCustomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyTalerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TalerMainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -29,7 +86,12 @@
             android:name=".Tutorial2Activity"
             android:exported="false" />
         <activity
-            android:name=".Tutorial1Activity"
+            android:name=".SelfWriteActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".SelectBookActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +99,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".SMSReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

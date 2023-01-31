@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainWordCircleFragment">
+
+    <TextView
+        android:id="@+id/text_input_3"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/RandomColor3"
+        android:gravity="center"
+
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_word"
+        app:layout_constraintStart_toEndOf="@+id/text_word" />
+
+    <TextView
+        android:id="@+id/text_input_2"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/RandomColor2"
+        android:gravity="center"
+
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_word"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_3"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@+id/text_input_1" />
+
+    <TextView
+        android:id="@+id/text_word"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/orange"
+        android:gravity="center"
+        android:text="word"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/text_input_1"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/RandomColor1"
+        android:gravity="center"
+
+
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_word"
+        app:layout_constraintEnd_toStartOf="@+id/text_word" />
+
+    <TextView
+        android:id="@+id/text_input_8"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/green_200"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/text_word"
+        app:layout_constraintTop_toBottomOf="@+id/text_word" />
+
+    <TextView
+        android:id="@+id/text_input_7"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/RandomColor1"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/text_input_8"
+        app:layout_constraintStart_toEndOf="@+id/text_input_6"
+        app:layout_constraintTop_toBottomOf="@+id/text_word" />
+
+    <TextView
+        android:id="@+id/text_input_6"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/RandomColor6"
+        android:gravity="center"
+
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/text_word"
+        app:layout_constraintTop_toBottomOf="@+id/text_word" />
+
+    <TextView
+        android:id="@+id/text_input_4"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/RandomColor4"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_input_6"
+        app:layout_constraintEnd_toStartOf="@+id/text_word"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_1" />
+
+    <TextView
+        android:id="@+id/text_input_5"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+
+        android:background="@drawable/shape_circle"
+        android:backgroundTint="@color/RandomColor5"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_input_8"
+        app:layout_constraintStart_toEndOf="@+id/text_word"
+        app:layout_constraintTop_toBottomOf="@+id/text_input_3"
+        app:layout_constraintVertical_bias="0.49" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
