@@ -54,7 +54,7 @@
         android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_clothes_1" />
+        app:srcCompat="@drawable/clothes_1" />
 
     <SeekBar
         android:id="@+id/costumeSb"

@@ -72,9 +72,9 @@
             android:layout_marginBottom="?attr/actionBarSize"
             android:background="@drawable/shape_tutorial_txt_bg"
             android:gravity="center_vertical"
-            android:lineSpacingMultiplier="1.5"
-            android:padding="16dp"
-            android:text="너는 어떤 사람이구나!\n너의 모습을 커스텀해줘."
+            android:lineSpacingMultiplier="2.0"
+            android:padding="20dp"
+            android:text="이제부터 너만의 동화책을 TALER에 바꿀 수 있어!\n우선, 너를 커스텀해줘"
             android:textColor="@color/black"
             android:textSize="16dp"></TextView>
     </FrameLayout>

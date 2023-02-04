@@ -1,9 +1,12 @@
 package com.example.taler
 
+import android.R.attr.password
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.taler.databinding.ActivityAddBookBinding
+import org.w3c.dom.Text
+
 
 class AddBookActivity : AppCompatActivity() {
     private lateinit var viewBinding: ActivityAddBookBinding
@@ -20,6 +23,8 @@ class AddBookActivity : AppCompatActivity() {
         viewBinding.btnBackgroundColor.setOnClickListener {
             val intent = Intent(this,BackgroundColorActivity::class.java)
             startActivity(intent)
+
+
         }
 
 

@@ -41,7 +41,7 @@ class Tutorial2Activity : AppCompatActivity() , TextToSpeech.OnInitListener {
                     //rotationYBy(360f)
                 }
             }.start()
-        },1500)
+        },3500)
 
         setSound()
     }
@@ -95,14 +95,14 @@ class Tutorial2Activity : AppCompatActivity() , TextToSpeech.OnInitListener {
                 rotationYBy(360f)
 
             }.start()
-        },3000)
+        },6000)
 
         //캐릭터 fade out - 사라짐
         Handler(Looper.getMainLooper()).postDelayed({
             val fadeOut = AnimationUtils.loadAnimation(this,R.anim.fade_out)
             viewBinding.tutorial2CharaterM.startAnimation(fadeOut)
             playSound()
-        },3500)
+        },6000)
 
         /*viewBinding.tutorial1CharaterM.animate().apply {
             duration = 400

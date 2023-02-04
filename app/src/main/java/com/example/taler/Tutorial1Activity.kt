@@ -15,6 +15,11 @@ import android.view.animation.AnimationUtils
 import com.example.taler.databinding.ActivityTutorial1Binding
 import java.util.*
 
+/*1. 리랑 : 캐릭터 커스텀 하는 부분까지 노래 지속되도록 하다가 캐릭터 커스텀 화면 들어가면 sound줄이기
+* 2. 리랑: 멘트 바꾸기 - 안녕 nickname아, 반가워
+*                   - 이제부터 너만의 동화책을 TALER엣 바꿀 수 있어
+*                   - 우선, 너를 커스텀 해줘!
+* 3. 승지: nickname 세션에 저장된 userID로 가져오기*/
 
 class Tutorial1Activity : AppCompatActivity(), TextToSpeech.OnInitListener {
     lateinit var viewBinding: ActivityTutorial1Binding
@@ -29,7 +34,7 @@ class Tutorial1Activity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var mStreamId: Int?=null
 
     //mediaPlayer
-    private lateinit var mp:MediaPlayer
+    //private lateinit var mp:MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,11 +47,17 @@ class Tutorial1Activity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setSound()
 
         //mediaPlayer
-        mp=MediaPlayer.create(this,R.raw.bgm)
+        /*mp=MediaPlayer.create(this,R.raw.bgm)
         mp.setVolume(0.5f,0.5f)
         mp.start()
+        val intent = Intent(this,MusicManager::class.java)
+        startService(intent)*/
+        //bgm
+        MusicManager()
+        MusicManager.SoundPlayer(this,R.raw.bgm)
 
     }
+
 
     private fun setSound() {
         mSoundPool = SoundPool.Builder().setMaxStreams(1).build()

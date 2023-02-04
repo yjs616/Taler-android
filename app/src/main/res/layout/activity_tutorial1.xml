@@ -72,9 +72,9 @@
             android:layout_marginBottom="?attr/actionBarSize"
             android:background="@drawable/shape_tutorial_txt_bg"
             android:gravity="center_vertical"
-            android:lineSpacingMultiplier="1.5"
-            android:padding="16dp"
-            android:text="안녕 닉네임아?\n나는 Taler이야."
+            android:lineSpacingMultiplier="2.0"
+            android:padding="20dp"
+            android:text="안녕! nickname아, 반가워.\n"
             android:textColor="@color/black"
             android:textSize="16dp"></TextView>
     </FrameLayout>

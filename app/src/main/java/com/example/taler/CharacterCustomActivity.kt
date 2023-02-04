@@ -1,6 +1,7 @@
 package com.example.taler
 
 import android.content.Intent
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -8,7 +9,8 @@ import android.widget.SeekBar
 import androidx.core.content.ContextCompat
 import com.example.taler.databinding.ActivityCharacterCustomBinding
 
-class CharacterCustomActivity : AppCompatActivity() {
+class CharacterCustomActivity : AppCompatActivity(){
+
     private lateinit var binding:ActivityCharacterCustomBinding
     var costumeVar = 1
     var clothes = 1
@@ -21,6 +23,8 @@ class CharacterCustomActivity : AppCompatActivity() {
         binding = ActivityCharacterCustomBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //MusicManager()
+        MusicManager.mp.setVolume(0.3f,0.3f)
 
         binding.costumeRg.setOnCheckedChangeListener{ radioGroup,checkedId ->
             when(checkedId){
@@ -58,6 +62,7 @@ class CharacterCustomActivity : AppCompatActivity() {
         }
 
     }
+
     // type : clothes_
     // idx : 1 이면
     // R.drawable.clothes_1에 접근

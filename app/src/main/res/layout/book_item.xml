@@ -20,7 +20,7 @@
             android:adjustViewBounds="true"
             android:background="@drawable/shape_square_border_black"
             android:padding="1dp"
-            tools:srcCompat="@drawable/picture_dog" />
+            tools:srcCompat="@drawable/img_picture_dog" />
 
         <TextView
             android:id="@+id/titleTv"
