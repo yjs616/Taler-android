@@ -22,7 +22,6 @@ class MainWordAddText : Fragment() {
     ): View? {
         viewBinding =FragmentMainWordAddTextBinding.inflate(layoutInflater)
         return viewBinding.root
-
         viewBinding.imgCheck.setOnClickListener(View.OnClickListener {
             //viewBinding.twoCircle.setBackgroundResource(R.color.black)
             //editTxt 값 담기

@@ -1,18 +1,16 @@
 package com.example.taler.api
 
+import com.example.taler.dao.EnrollBookDto
 import com.example.taler.dao.ReadBookDto
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface EnrollBookService {
     @FormUrlEncoded
-    @POST("book/bookroom")
+    @POST("book/bookroom/{userId}")
     fun postEnrolledBook(
-        @Query("userId") userId:String,
-        bookTitle:String,
-        bookAuthor:String
-    ): Call<ReadBookDto>
+        @Path ("userId") userId:String,
+        @Field("bookTitle") bookTitle:String,
+        @Field("bookTitle") bookAuthor:String
+    ): Call<EnrollBookDto>
 }

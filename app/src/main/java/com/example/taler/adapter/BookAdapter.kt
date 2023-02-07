@@ -3,6 +3,7 @@ package com.example.taler.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.taler.R
@@ -14,6 +15,7 @@ import com.example.taler.model.Book
 // 개별 데이터에 대응
 // ViewHolder 클래스에서 리스트가 아닌 객체 하나에 접근하는게 더 편하네 EnrollBookAdapter 도 수정 바람
 class BookViewHolder(val binding: BookItemBinding): RecyclerView.ViewHolder(binding.root){
+    var count = 0
     fun bind(book: Book){
         setContent(book)
         binding.bookIv.setOnClickListener{
@@ -26,11 +28,12 @@ class BookViewHolder(val binding: BookItemBinding): RecyclerView.ViewHolder(bind
         if(!book.checked){
             book.checked = true
             view.setBackgroundResource(R.drawable.shape_square_border_red)
+            count++
 
         }else{
             book.checked = false
             view.setBackgroundResource(R.drawable.shape_square_border_black)
-
+            count--
         }
     }
     // 이미지, 텍스트 item에 적용
@@ -54,7 +57,6 @@ class BookAdapter(val bookList: MutableList<Book>): RecyclerView.Adapter<Recycle
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         binding = (holder as BookViewHolder).binding
-
         holder.bind(bookList[position])
         /*binding.bookIv.setOnClickListener{
             setChecked(position,it)
@@ -66,6 +68,5 @@ class BookAdapter(val bookList: MutableList<Book>): RecyclerView.Adapter<Recycle
     override fun getItemCount(): Int{
         return bookList.size
     }
-
 
 }

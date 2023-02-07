@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,8 +30,7 @@ class EnrollBookActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEnrollBookBinding
     private lateinit var bookService: BookService
     lateinit var bookList:MutableList<Book>
-    private lateinit var readBookService:ReadBookService
-    lateinit var selectedBook:Book
+    lateinit var checkedBookList:MutableList<Book>
     lateinit var enrollBookService: EnrollBookService
 
     //private lateinit var enrollBookAdapter: EnrollBookAdapter
@@ -38,22 +38,28 @@ class EnrollBookActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         bookList = mutableListOf<Book>()
-        selectedBook = Book()
+        checkedBookList = mutableListOf<Book>()
 
         binding = ActivityEnrollBookBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
-
-
 
         initBookService()
         bookServiceLoadBestSellers()
         //bookServiceSearchBook("동화")
         Log.d("온크리에이트안북리스트",bookList.size.toString())
 
+        initEnrollBookService()
         binding.selfBtn.setOnClickListener{
-
-            startActivity(Intent(this,SelfWriteActivity::class.java))
+            addCheckedBookList()
+            if(checkedBookList.size != 1){
+                Toast.makeText(this,"책 1권을 선택해주세요!", Toast.LENGTH_SHORT).show()
+                checkedBookList.removeAll(checkedBookList)
+            }else{
+                enrollBookServicePostBook("1",checkedBookList[0].title,checkedBookList[0].author)
+                Log.d("인롤액티비티체크된북리스트",checkedBookList[0].author)
+                startActivity(Intent(this,SelfWriteActivity::class.java))
+            }
         }
 
         /*enrollBookAdapter.setOnBookClickListener(object:EnrollBookAdapter.OnBookClickListener{
@@ -106,7 +112,6 @@ class EnrollBookActivity : AppCompatActivity() {
                             Log.d(M_TAG, book.toString())
                             bookList.add(book)
                         }
-                        // 여기서는 왜 초기화가 불가능할까...???
                         //enrollBookAdapter = EnrollBookAdapter(it.books as MutableList<Book>)
                         //initBookRecyclerView(it.books as MutableList<Book>)
                         setRecyclerView(it.books as MutableList<Book>)
@@ -182,6 +187,35 @@ class EnrollBookActivity : AppCompatActivity() {
                 }
             })
     }
+
+    fun enrollBookServicePostBook(userId: String,bookTitle:String, bookAuthor:String) {
+        enrollBookService.postEnrolledBook(userId,bookTitle,bookAuthor)
+            .enqueue(object : Callback<EnrollBookDto> {
+                // 성공.
+
+                override fun onResponse(
+                    call: Call<EnrollBookDto>,
+                    response: Response<EnrollBookDto>
+                ) {
+
+                    if (response.isSuccessful.not()) {
+                        Log.d("서버전송실패", "NOT!! SUCCESS")
+                        return
+                    }
+
+                    // 받은 응답의 바디가 채워져 있는 경우만 진행;
+                    response.body()?.let {
+                        Log.d("서버전송성공", it.toString())
+                    }
+                }
+
+                // 실패.
+                override fun onFailure(call: Call<EnrollBookDto>, t: Throwable) {
+
+                    Log.d("서버전송실패", t.toString())
+                }
+            })
+    }
     /*
     fun enrollBookServicePostBook(userId:String,bookTitle:String, bookAuthor:String)  {
         enrollBookService.postEnrolledBook(userId,bookTitle, bookAuthor)
@@ -216,6 +250,14 @@ class EnrollBookActivity : AppCompatActivity() {
         binding.bookRv.layoutManager = GridLayoutManager(this,2)
         binding.bookRv.adapter = EnrollBookAdapter(bookList)
         binding.bookRv.addItemDecoration(DividerItemDecoration(this, LinearLayoutManager.VERTICAL))
+    }
+
+    fun addCheckedBookList(){
+        for(book in bookList){
+            if(book.checked){
+                checkedBookList.add(book)
+            }
+        }
     }
 
     companion object {

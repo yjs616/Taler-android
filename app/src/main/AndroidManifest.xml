@@ -38,20 +38,16 @@
             android:name=".Tutorial1Activity"
             android:exported="false"
             android:label="직접 입력하세요!" />
-        <activity
-            android:name=".SelectTextRecordActivity"
-            android:exported="false" />
+
         <activity
             android:name=".NumActivity"
             android:exported="false" />
         <activity
             android:name=".EnrollBookActivity"
-            android:exported="false"
+            android:exported="true"
             android:label=""
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
-        <activity
-            android:name=".CharActivity"
-            android:exported="false" />
+
         <activity
             android:name=".BackgroundColorActivity"
             android:exported="false" />

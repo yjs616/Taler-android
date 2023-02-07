@@ -52,7 +52,7 @@ class tutorialTxt2 : Fragment(), TextToSpeech.OnInitListener{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        tts = TextToSpeech(context, this)         //activity, context 둘 다 됨
+        //tts = TextToSpeech(context, this)         //activity, context 둘 다 됨
     }
 
 

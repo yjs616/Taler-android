@@ -8,5 +8,7 @@ data class Book(
     @SerializedName("description") val description: String = "",
     @SerializedName("coverSmallUrl") val coverSmallUrl: String = "",
     @SerializedName("coverLargeUrl") val coverLargeUrl: String = "",
+    @SerializedName("author") val author:String = "",
     var checked:Boolean = false
+
 )
